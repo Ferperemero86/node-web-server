@@ -17,22 +17,17 @@ hbs.registerHelper('capitalLetters', (text) => {
   return text.toUpperCase();
 });
 
-
 app.get('/about',(req,res) => {
   res.render('about.hbs', {
-      pageTitle: 'About Page',
-      welcome: 'Welcome to my website'
+      pageTitle: 'About Page'
   });
 });
 
-
 app.get('/',(req,res) => {
     res.render('home.hbs',{
-        pageTitle: 'About Page',
-        welcomePar: 'Welcome mother fucker'
+        pageTitle: 'Home Page'
     });
 });
-
 
 app.listen(3000, () => {
     console.log('Server is up on port 3000');
